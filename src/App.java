@@ -1,6 +1,4 @@
-
 import javax.swing.JFrame;
-
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,10 +11,16 @@ public class App {
 
         //Create the frame of the game
         JFrame frame = new JFrame("Pac Man");
-        frame.setVisible(true);
         frame.setSize(boardWidth, boardHeight);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a panel where the game happens
+        PacMan pacmanGame = new PacMan();
+        frame.add(pacmanGame);
+        frame.pack();
+        // set the frame visible after all the components are visible in the game
+        frame.setVisible(true);
     }
 }
