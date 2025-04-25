@@ -291,6 +291,10 @@ public class PacMan extends JPanel implements ActionListener, KeyListener{
         }
         foods.remove(foodEaten);
 
+        if(foods.isEmpty()){
+            loadMap();
+            resetPosition();
+        }
 
     }
 
@@ -338,6 +342,14 @@ public class PacMan extends JPanel implements ActionListener, KeyListener{
 
     @Override
     public void keyReleased(KeyEvent e) {
+        if(gameOver){
+            loadMap();
+            resetPosition();
+            lives = 3;
+            score = 0;
+            gameOver = false;
+            gameLoop.start();
+        }
         // TODO Auto-generated method stub
         //throw new UnsupportedOperationException("Unimplemented method 'keyReleased'");
         //System.out.println("KeyEvent: " + e.getKeyCode());
