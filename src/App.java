@@ -20,6 +20,7 @@ public class App {
         PacMan pacmanGame = new PacMan();
         frame.add(pacmanGame);
         frame.pack();
+        pacmanGame.requestFocus();
         // set the frame visible after all the components are visible in the game
         frame.setVisible(true);
         // JFrame frame = new JFrame("PacMan Game");
