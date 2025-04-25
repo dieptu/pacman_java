@@ -1,5 +1,7 @@
 import java.awt.*;
+import java.awt.event.*;
 import java.util.HashSet;
+import java.util.Random;
 import javax.swing.*;
 
 public class PacMan extends JPanel{
@@ -97,6 +99,7 @@ public class PacMan extends JPanel{
         pacmanRightImage = new ImageIcon(getClass().getResource("./pacmanRight.png")).getImage();
     
         loadMap();
+       
         // System.out.println(walls.size());
         // System.out.println(foods.size());
         // System.out.println(ghosts.size());
@@ -141,5 +144,35 @@ public class PacMan extends JPanel{
 
             }
         }
+    }
+
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        System.out.println("Painting...");
+        draw(g);
+    }
+
+    public void draw(Graphics g){
+        //g.setColor(Color.YELLOW);
+        //draw pacman
+        g.drawImage(pacman.image,pacman.x, pacman.y, pacman.width, pacman.height, null);
+    
+        //draw ghosts
+        for (Block ghost: ghosts){
+            g.drawImage(ghost.image, ghost.x, ghost.y, ghost.width, ghost.height, null);
+        }
+
+        //draw walls
+        for (Block wall: walls){
+            g.drawImage(wall.image, wall.x, wall.y, wall.width, wall.height, null);
+        }
+
+        //draw foods
+        g.setColor(Color.WHITE);
+        for (Block food: foods){
+            g.fillRect(food.x, food.y, food.width, food.height);
+        }
+
+
     }
 }

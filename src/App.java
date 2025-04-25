@@ -22,5 +22,13 @@ public class App {
         frame.pack();
         // set the frame visible after all the components are visible in the game
         frame.setVisible(true);
+        // JFrame frame = new JFrame("PacMan Game");
+        // PacMan gamePanel = new PacMan();  // ← this is your custom JPanel
+
+        // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // frame.getContentPane().add(gamePanel);
+        // frame.pack();  // sizes the frame to fit the preferred size of PacMan
+        // frame.setLocationRelativeTo(null);  // centers the window
+        // frame.setVisible(true);
     }
 }
