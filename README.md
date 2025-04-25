@@ -1,3 +1,6 @@
+<img width="604" alt="Screenshot 2025-04-24 at 10 01 18 PM" src="https://github.com/user-attachments/assets/94794886-8210-414a-a1ff-a6d21aad7500" />
+
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
